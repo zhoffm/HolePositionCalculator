@@ -7,8 +7,18 @@ import (
 func main() {
 	holeSpacing := 0.375
 	endSpacing := 0.75
-	holeDiameters := []float64{3.0 / 32.0, 7.0 / 64.0, 1.0 / 8.0, 9.0 / 64.0, 5.0 / 32.0, 3.0 / 16.0, 7.0 / 32.0, 1.0 / 4.0}
+	holeDiameters := []float64{
+		3.0 / 32.0, 
+		7.0 / 64.0, 
+		1.0 / 8.0, 
+		9.0 / 64.0, 
+		5.0 / 32.0, 
+		3.0 / 16.0, 
+		7.0 / 32.0, 
+		1.0 / 4.0
+	}
 	centerPositions := GetHoleCenterPositions(holeSpacing, endSpacing, holeDiameters)
+	fmt.Printf("Number of Holes: %d\n", len(holeDiameters))
 	fmt.Printf("Hole Center Positions in Inches: %v", centerPositions)
 }
 
